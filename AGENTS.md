@@ -1,28 +1,27 @@
-# Nexo — contexto inicial
+# Nexo — instruções para agentes
 
-Portal local de demandas internas para um workshop. A branch `main` é o produto existente; a aprovação de orçamento será adicionada durante o exercício.
+Portal local de demandas internas para um workshop, com Next.js, React, TypeScript e persistência JSON. Preserve a stack existente deste projeto.
 
-## Encontrar o código
+## Regras essenciais
 
-- `src/domain/`: tipos, validação e regras de negócio.
-- `src/server/`: API e armazenamento JSON.
-- `src/components/`: interface React do quadro e dos formulários.
-- `data/seed.json`: exemplos versionados; dados de trabalho ficam em `.local/`.
-- `tests/`: testes isolados e fluxo pelo navegador.
-- `CONTEXT.md`: vocabulário; `docs/architecture.md`: organização.
-
-## Executar e verificar
-
-Node.js 24. Use `npm ci`, `npm run dev` e `npm run validate`.
-Após mudanças de interface ou de fluxo, execute `npm run test:e2e` quando Chromium estiver disponível. Informe quais verificações realmente executou e o que ficou pendente.
-
-## Cuidados do projeto
-
-- Preserve as regras existentes e os dados do participante. Mutações passam pela transação do armazenamento.
-- Valide regras no backend. Controles visuais não substituem validação.
+- Mantenha a comunicação e a interface em português (pt-BR), usando o glossário em [CONTEXT.md](CONTEXT.md).
+- Preserve alterações existentes e dados do participante. Mutações passam pela transação do armazenamento; regras são validadas no backend.
 - Não acrescente banco de dados, Docker, autenticação real ou serviços externos ao exercício.
-- Leia referências conforme a tarefa exigir. Ao implementar a nova história, confirme o PRD e a especificação presentes na branch de trabalho.
-- Mantenha a comunicação e a interface em português. Use os nomes do glossário.
+- Antes de implementar a nova história, confirme o PRD e a especificação da branch de trabalho.
+- Informe o que mudou, quais verificações executou e o que ficou pendente.
+
+## Consulte conforme a tarefa
+
+Use Progressive Disclosure: comece por este arquivo e leia apenas os guias pertinentes à tarefa, antes de agir. Abra as referências adicionais quando forem necessárias; não carregue toda a documentação por padrão.
+
+| Quando precisar | Leia |
+| --- | --- |
+| Entender o produto, o vocabulário e o escopo | [Contexto do projeto](docs-agents/contexto.md) |
+| Alterar código, API, regras ou persistência | [Arquitetura e dados](docs-agents/arquitetura.md) |
+| Preparar o ambiente, executar ou validar mudanças | [Execução e validação](docs-agents/validacao.md) |
+| Implementar a aprovação de orçamento ou retomar o exercício | [Evolução do workshop](docs-agents/workshop.md) |
+
+Ao atualizar estas instruções, mantenha aqui apenas regras transversais e o índice. Coloque detalhes no guia correspondente e prefira links às fontes existentes a cópias de seu conteúdo.
 
 Este arquivo orienta o trabalho; não substitui as permissões configuradas no agente.
 
